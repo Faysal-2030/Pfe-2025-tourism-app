@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Citytours - Premium site template for city tours agencies, transfers and tickets.">
+    <meta name="author" content="Ansonika">
+    <title th:text="#{page.title}">CITY TOURS - City tours and travel site template by Ansonika</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" th:href="@{/static_fr/img/imge/favicon.ico}" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" th:href="@{/static_fr/img/imge/apple-touch-icon-57x57-precomposed.png}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" th:href="@{/static_fr/img/imge/apple-touch-icon-72x72-precomposed.png}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" th:href="@{/static_fr/img/imge/apple-touch-icon-114x114-precomposed.png}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" th:href="@{/static_fr/img/imge/apple-touch-icon-144x144-precomposed.png}">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- COMMON CSS -->
+    <link th:href="@{/static_fr/CSS/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/static_fr/CSS/css/style.css}" rel="stylesheet">
+    <link th:href="@{/static_fr/CSS/css/vendors.css}" rel="stylesheet">
+    
+    <!-- ALTERNATIVE COLORS CSS -->
+    <link href="#" id="colors" rel="stylesheet">
+
+    <!-- REVOLUTION SLIDER CSS -->
+    <link th:href="@{/static_fr/CSS/rs-plugin/css/settings.css}" rel="stylesheet">
+    <link th:href="@{/static_fr/CSS/css/extralayers.css}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-spinner sk-spinner-wave">
+            <div class="sk-rect1"></div>
+            <div class="sk-rect2"></div>
+            <div class="sk-rect3"></div>
+            <div class="sk-rect4"></div>
+            <div class="sk-rect5"></div>
+        </div>
+    </div>
+    <!-- End Preload -->
+
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
+
+    <!-- Header================================================== -->
+    <header>
+        <div id="top_line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6"><i class="icon-phone"></i><strong>0045 043204434</strong></div>
+                    <div class="col-6">
+                        <ul id="top_links">
+                            <li><a href="#sign-in-dialog" id="access_link" th:text="#{header.signin}">Sign in</a></li>
+                            <li><a th:href="@{/wishlist.html}" id="wishlist_link" th:text="#{header.wishlist}">Wishlist</a></li>
+                            <li><a href="https://1.envato.market/ryzjQ" target="_parent" th:text="#{header.purchase}">Purchase this template</a></li>
+                        </ul>
+                    </div>
+                </div><!-- End row -->
+            </div><!-- End container-->
+        </div><!-- End top line-->
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div id="logo_home">
+                        <h1><a th:href="@{/index.html}" title="City tours travel template" th:text="#{header.title}">City Tours travel template</a></h1>
+                    </div>
+                </div>
+                <nav class="col-9">
+                    <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span th:text="#{header.mobileMenu}">Menu mobile</span></a>
+                    <div class="main-menu">
+                        <div id="header_menu">
+                            <img th:src="@{/static_fr/img/imge/logo_sticky.png}" width="160" height="34" alt="City tours">
+                        </div>
+                        <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
+                        <ul>
+                            <li class="submenu">
+                                <a href="javascript:void(0);" class="show-submenu" th:text="#{menu.home}">Home <i class="icon-down-open-mini"></i></a>
+                                <ul>
+                                    <li><a th:href="@{/index.html}" th:text="#{menu.home.owl}">Owl Carousel Slider</a></li>
+                                    <li><a th:href="@{/index_25.html}" th:text="#{menu.home.kenburns}">KenBurns Slider</a></li>
+                                    <li><a th:href="@{/index_22.html}" th:text="#{menu.home.carousel}">Home items with Carousel</a></li>
+                                    <li><a th:href="@{/index_23.html}" th:text="#{menu.home.search}">Home with Search V2</a></li>
+                                    <li class="third-level"><a href="javascript:void(0);" th:text="#{menu.home.revolution}">Revolution slider <strong class="badge badge-danger">New!</strong></a>
+                                        <ul>
+                                            <li><a th:href="@{/index_24.html}" th:text="#{menu.home.revolution.default}">Default slider</a></li>
+                                            <li><a th:href="@{/index_20.html}" th:text="#{menu.home.revolution.basic}">Basic slider</a></li>
+                                            <li><a th:href="@{/index_14.html}" th:text="#{menu.home.revolution.youtube}">Youtube Hero</a></li>
+                                            <li><a th:href="@{/index_15.html}" th:text="#{menu.home.revolution.vimeo}">Vimeo Hero</a></li>
+                                            <li><a th:href="@{/index_17.html}" th:text="#{menu.home.revolution.fullscreen}">Full Screen <strong class="badge badge-danger">New!</strong></a></li>
+                                            <li><a th:href="@{/index_21.html}" th:text="#{menu.home.revolution.slicey}">Full Screen Slicey <strong class="badge badge-danger">New!</strong></a></li>
+                                            <li><a th:href="@{/index_16.html}" th:text="#{menu.home.revolution.carousel}">Carousel</a></li>
+                                            <li><a th:href="@{/index_19.html}" th:text="#{menu.home.revolution.mailchimp}">Mailchimp Newsletter</a></li>
+                                            <li><a th:href="@{/index_18.html}" th:text="#{menu.home.revolution.caption}">Fixed Caption</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a th:href="@{/index_12.html}" th:text="#{menu.home.layer}">Layer slider</a></li>
+                                    <li><a th:href="@{/index_2.html}" th:text="#{menu.home.tours}">With Only tours</a></li>
+                                    <li><a th:href="@{/index_3.html}" th:text="#{menu.home.single}">Single image</a></li>
+                                    <li><a th:href="@{/index_4.html}" th:text="#{menu.home.video}">Header video</a></li>
+                                    <li><a th:href="@{/index_7.html}" th:text="#{menu.home.searchPanel}">With search panel</a></li>
+                                    <li><a th:href="@{/index_13.html}" th:text="#{menu.home.tabs}">With tabs</a></li>
+                                    <li><a th:href="@{/index_5.html}" th:text="#{menu.home.map}">With map</a></li>
+                                    <li><a th:href="@{/index_6.html}" th:text="#{menu.home.searchBar}">With search bar</a></li>
+                                    <li><a th:href="@{/index_8.html}" th:text="#{menu.home.searchVideo}">Search bar + Video</a></li>
+                                    <li><a th:href="@{/index_9.html}" th:text="#{menu.home.textRotator}">With Text Rotator</a></li>
+                                    <li><a th:href="@{/index_10.html}" th:text="#{menu.home.cookie}">With Cookie Bar (EU law)</a></li>
+                                    <li><a th:href="@{/index_11.html}" th:text="#{menu.home.popup}">Popup Advertising</a></li>
+                                </ul>
+                            </li>
+                            <!-- Other menu items similarly with Thymeleaf -->
+                        </ul>
+                    </div><!-- End main-menu -->
+                    <ul id="top_tools">
+                        <li>
+                            <a href="javascript:void(0);" class="search-overlay-menu-btn"><i class="icon_search"></i></a>
+                        </li>
+                        <li>
+                            <div class="dropdown dropdown-cart">
+                                <a href="#0" data-bs-hover="dropdown" class="cart_bt"><i class="icon_bag_alt"></i><strong>3</strong></a>
+                                <ul class="dropdown-menu" id="cart_items">
+                                    <li>
+                                        <div class="image"><img th:src="@{/static_fr/img/imge/thumb_cart_1.jpg}" alt="Louvre museum"></div>
+                                        <strong><a href="#" th:text="#{cart.item1}">Louvre museum</a>1x $36.00 </strong>
+                                        <a href="#" class="action"><i class="icon-trash"></i></a>
+                                    </li>
+                                    <li>
+                                        <div class="image"><img th:src="@{/static_fr/img/imge/thumb_cart_2.jpg}" alt="Versailles tour"></div>
+                                        <strong><a href="#" th:text="#{cart.item2}">Versailles tour</a>2x $36.00 </strong>
+                                        <a href="#" class="action"><i class="icon-trash"></i></a>
+                                    </li>
+                                    <li>
+                                        <div class="image"><img th:src="@{/static_fr/img/imge/thumb_cart_3.jpg}" alt="Versailles tour"></div>
+                                        <strong><a href="#" th:text="#{cart.item3}">Versailles tour</a>1x $36.00 </strong>
+                                        <a href="#" class="action"><i class="icon-trash"></i></a>
+                                    </li>
+                                    <li>
+                                        <div th:text="#{cart.total} + ': '">Total: <span>$120.00</span></div>
+                                        <a th:href="@{/cart.html}" class="button_drop" th:text="#{cart.goto}">Go to cart</a>
+                                        <a th:href="@{/payment.html}" class="button_drop outline" th:text="#{cart.checkout}">Check out</a>
+                                    </li>
+                                </ul>
+                            </div><!-- End dropdown-cart-->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div><!-- container -->
+    </header><!-- End Header -->
+
+    <main>
+        <div class="tp-banner-container">
+			<div class="tp-banner">
+				<ul>
+					<!-- SLIDE 1 -->
+					<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
+						<!-- MAIN IMAGE -->
+						<img th:src="@{/tourism/citytours/img/slides_bg/dummy.png}" alt="slidebg1" 
+							 data-lazyload="/tourism/citytours/img/slides_bg/slide_1.jpg" 
+							 data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+						<!-- LAYER NR. 1 -->
+						<div class="tp-caption white_heavy_40 customin customout text-center text-uppercase" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="-20" 
+							 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" 
+							 data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="1000" data-start="1700" data-easing="Back.easeInOut" data-endspeed="300" 
+							 style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;" 
+							 th:text="#{slider.title1}">Affordable Paris Tours
+						</div>
+						<!-- LAYER NR. 2 -->
+						<div class="tp-caption customin tp-resizeme rs-parallaxlevel-0 text-center" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="15" 
+							 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="500" data-start="2600" data-easing="Power3.easeInOut" data-splitin="none" 
+							 data-splitout="none" data-elementdelay="0.05" data-endelementdelay="0.1" 
+							 style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+							<div style="color:#ffffff; font-size:16px; text-transform:uppercase" 
+								 th:text="#{slider.subtitle1}">
+								City Tours / Tour Tickets / Tour Guides
+							</div>
+						</div>
+						<!-- LAYER NR. 3 -->
+						<div class="tp-caption customin tp-resizeme rs-parallaxlevel-0" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="70" 
+							 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="500" data-start="2900" data-easing="Power3.easeInOut" data-splitin="none" 
+							 data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" 
+							 data-linktoslide="next" style="z-index: 12;">
+							<a th:href="@{/tourism/citytours/all_tour_list.html}" class="button_intro" 
+							   th:text="#{slider.button1}">View tours</a> 
+							<a th:href="@{/tourism/citytours/single_tour.html}" class="button_intro outline" 
+							   th:text="#{slider.button2}">Read more</a>
+						</div>
+					</li>
+					
+					<!-- SLIDE 2 -->
+					<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
+						<!-- MAIN IMAGE -->
+						<img th:src="@{/tourism/citytours/img/slides_bg/dummy.png}" alt="slidebg2" 
+							 data-lazyload="/tourism/citytours/img/slides_bg/slide_4.jpg" 
+							 data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+						<!-- LAYER NR. 1 -->
+						<div class="tp-caption white_heavy_40 customin customout text-center text-uppercase" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="-20" 
+							 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" 
+							 data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="1000" data-start="1700" data-easing="Back.easeInOut" data-endspeed="300" 
+							 style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;" 
+							 th:text="#{slider.title2}">More than 100 tours available
+						</div>
+						<!-- LAYER NR. 2 -->
+						<div class="tp-caption customin tp-resizeme rs-parallaxlevel-0 text-center" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="15" 
+							 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="500" data-start="2600" data-easing="Power3.easeInOut" data-splitin="none" 
+							 data-splitout="none" data-elementdelay="0.05" data-endelementdelay="0.1" 
+							 style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+							<div style="color:#ffffff; font-size:16px; text-transform:uppercase" 
+								 th:text="#{slider.subtitle2}">
+								Historic Buildings / Open Bus Tours / Museums Guides
+							</div>
+						</div>
+						<!-- LAYER NR. 3 -->
+						<div class="tp-caption customin tp-resizeme rs-parallaxlevel-0" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="70" 
+							 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="500" data-start="2900" data-easing="Power3.easeInOut" data-splitin="none" 
+							 data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" 
+							 data-linktoslide="next" style="z-index: 12;">
+							<a th:href="@{/tourism/citytours/all_tour_list.html}" class="button_intro" 
+							   th:text="#{slider.button1}">View tours</a> 
+							<a th:href="@{/tourism/citytours/single_tour.html}" class="button_intro outline" 
+							   th:text="#{slider.button2}">Read more</a>
+						</div>
+					</li>
+		
+					<!-- SLIDE 3 -->
+					<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
+						<!-- MAIN IMAGE -->
+						<img th:src="@{/tourism/citytours/img/slides_bg/dummy.png}" alt="slidebg3" 
+							 data-lazyload="/tourism/citytours/img/slides_bg/slide_6.jpg" 
+							 data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+						<!-- LAYER NR. 1 -->
+						<div class="tp-caption white_heavy_40 customin customout text-center text-uppercase" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="-20" 
+							 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" 
+							 data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="1000" data-start="1700" data-easing="Back.easeInOut" data-endspeed="300" 
+							 style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;" 
+							 th:text="#{slider.title3}">Discover fantastic places
+						</div>
+						<!-- LAYER NR. 2 -->
+						<div class="tp-caption customin tp-resizeme rs-parallaxlevel-0 text-center" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="15" 
+							 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="500" data-start="2600" data-easing="Power3.easeInOut" data-splitin="none" 
+							 data-splitout="none" data-elementdelay="0.05" data-endelementdelay="0.1" 
+							 style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+							<div style="color:#ffffff; font-size:16px; text-transform:uppercase" 
+								 th:text="#{slider.subtitle3}">
+								We offer a variety of services and options
+							</div>
+						</div>
+						<!-- LAYER NR. 3 -->
+						<div class="tp-caption customin tp-resizeme rs-parallaxlevel-0" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="70" 
+							 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="500" data-start="2900" data-easing="Power3.easeInOut" data-splitin="none" 
+							 data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" 
+							 data-linktoslide="next" style="z-index: 12;">
+							<a th:href="@{/tourism/citytours/all_tour_list.html}" class="button_intro" 
+							   th:text="#{slider.button1}">View tours</a> 
+							<a th:href="@{/tourism/citytours/single_tour.html}" class="button_intro outline" 
+							   th:text="#{slider.button2}">Read more</a>
+						</div>
+					</li>
+		
+					<!-- SLIDE 4 -->
+					<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
+						<!-- MAIN IMAGE -->
+						<img th:src="@{/tourism/citytours/img/slides_bg/dummy.png}" alt="slidebg4" 
+							 data-lazyload="/tourism/citytours/img/slides_bg/slide_5.jpg" 
+							 data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+						<!-- LAYER NR. 1 -->
+						<div class="tp-caption white_heavy_40 customin customout text-center text-uppercase" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="-20" 
+							 data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" 
+							 data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="1000" data-start="1700" data-easing="Back.easeInOut" data-endspeed="300" 
+							 style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;" 
+							 th:text="#{slider.title4}">CityTours provides tour guides
+						</div>
+						<!-- LAYER NR. 2 -->
+						<div class="tp-caption customin tp-resizeme rs-parallaxlevel-0 text-center" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="15" 
+							 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="500" data-start="2600" data-easing="Power3.easeInOut" data-splitin="none" 
+							 data-splitout="none" data-elementdelay="0.05" data-endelementdelay="0.1" 
+							 style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">
+							<div style="color:#ffffff; font-size:16px; text-transform:uppercase" 
+								 th:text="#{slider.subtitle4}">
+								Visit museum with a dedicated tour guide
+							</div>
+						</div>
+						<!-- LAYER NR. 3 -->
+						<div class="tp-caption customin tp-resizeme rs-parallaxlevel-0" 
+							 data-x="center" data-y="center" data-hoffset="0" data-voffset="70" 
+							 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+							 data-speed="500" data-start="2900" data-easing="Power3.easeInOut" data-splitin="none" 
+							 data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" 
+							 data-linktoslide="next" style="z-index: 12;">
+							<a th:href="@{/tourism/citytours/all_tour_list.html}" class="button_intro" 
+							   th:text="#{slider.button1}">View tours</a> 
+							<a th:href="@{/tourism/citytours/single_tour.html}" class="button_intro outline" 
+							   th:text="#{slider.button2}">Read more</a>
+						</div>
+					</li>
+				</ul>
+				<div class="tp-bannertimer tp-bottom"></div>
+			</div>
+		</div>
+        <!-- End Slider -->
+
+		<div class="white_bg">
+			<div class="container margin_60">
+				<div class="main_title">
+					<h2 th:text="#{home.popularTours}">Other <span>Popular</span> tours</h2>
+					<p th:text="#{home.popularTours.desc}">
+						Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.
+					</p>
+				</div>
+				<div class="row add_bottom_45">
+					<div class="col-lg-4 other_tours">
+						<ul>
+							<li><a href="#"><i class="icon_set_1_icon-3"></i><span th:text="#{tours.eiffel}">Tour Eiffel</span><span class="other_tours_price">$42</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-30"></i><span th:text="#{tours.shopping}">Shopping tour</span><span class="other_tours_price">$35</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-44"></i><span th:text="#{tours.versailles}">Versailles tour</span><span class="other_tours_price">$20</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-3"></i><span th:text="#{tours.montparnasse}">Montparnasse skyline</span><span class="other_tours_price">$26</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-44"></i><span th:text="#{tours.pompidue}">Pompidue</span><span class="other_tours_price">$26</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-3"></i><span th:text="#{tours.senna}">Senna River tour</span><span class="other_tours_price">$32</span></a></li>
+						</ul>
+					</div>
+					<div class="col-lg-4 other_tours">
+						<ul>
+							<li><a href="#"><i class="icon_set_1_icon-1"></i><span th:text="#{tours.notredame}">Notredame</span><span class="other_tours_price">$48</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-4"></i><span th:text="#{tours.lafaiette}">Lafaiette</span><span class="other_tours_price">$55</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-30"></i><span th:text="#{tours.trocadero}">Trocadero</span><span class="other_tours_price">$76</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-3"></i><span th:text="#{tours.openbus}">Open Bus tour</span><span class="other_tours_price">$55</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-30"></i><span th:text="#{tours.louvre}">Louvre museum</span><span class="other_tours_price">$24</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-3"></i><span th:text="#{tours.madlene}">Madlene Cathedral</span><span class="other_tours_price">$24</span></a></li>
+						</ul>
+					</div>
+					<div class="col-lg-4 other_tours">
+						<ul>
+							<li><a href="#"><i class="icon_set_1_icon-37"></i><span th:text="#{tours.montparnasse2}">Montparnasse</span><span class="other_tours_price">$36</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-1"></i><span th:text="#{tours.dorseymuseum}">D'Orsey museum</span><span class="other_tours_price">$28</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-50"></i><span th:text="#{tours.gioconda}">Gioconda Louvre musuem</span><span class="other_tours_price">$44</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-44"></i><span th:text="#{tours.eiffel2}">Tour Eiffel</span><span class="other_tours_price">$56</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-50"></i><span th:text="#{tours.ladefanse}">Ladefanse</span><span class="other_tours_price">$16</span></a></li>
+							<li><a href="#"><i class="icon_set_1_icon-44"></i><span th:text="#{tours.notredame2}">Notredame</span><span class="other_tours_price">$26</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- End row -->
+		
+				<div class="banner colored">
+					<h4 th:text="#{home.discoverTours}">Discover our Top tours <span>from $34</span></h4>
+					<p th:text="#{home.discoverTours.desc}">
+						Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in.
+					</p>
+					<a th:href="@{/tourism/citytours/single_tour.html}" class="btn_1 white" th:text="#{home.readMore}">Read more</a>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg-3 col-md-6 text-center">
+						<p>
+							<a href="#"><img th:src="@{/tourism/citytours/img/bus.jpg}" alt="Sightseeing tour" class="img-fluid rounded"></a>
+						</p>
+						<h4><span th:text="#{services.sightseeing}">Sightseen tour</span> booking</h4>
+						<p th:text="#{services.sightseeing.desc}">Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in.</p>
+					</div>
+					<div class="col-lg-3 col-md-6 text-center">
+						<p>
+							<a href="#"><img th:src="@{/tourism/citytours/img/transfer.jpg}" alt="Transfer" class="img-fluid rounded"></a>
+						</p>
+						<h4><span th:text="#{services.transfer}">Transfer</span> booking</h4>
+						<p th:text="#{services.transfer.desc}">Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in.</p>
+					</div>
+					<div class="col-lg-3 col-md-6 text-center">
+						<p>
+							<a href="#"><img th:src="@{/tourism/citytours/img/guide.jpg}" alt="Tour guide" class="img-fluid rounded"></a>
+						</p>
+						<h4><span th:text="#{services.guide}">Tour guide</span> booking</h4>
+						<p th:text="#{services.guide.desc}">Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in.</p>
+					</div>
+					<div class="col-lg-3 col-md-6 text-center">
+						<p>
+							<a href="#"><img th:src="@{/tourism/citytours/img/hotel.jpg}" alt="Hotel" class="img-fluid rounded"></a>
+						</p>
+						<h4><span th:text="#{services.hotel}">Hotel</span> booking</h4>
+						<p th:text="#{services.hotel.desc}">Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in.</p>
+					</div>
+				</div>
+				<!-- End row -->
+			</div>
+			<!-- End container -->
+		</div>
+		<!-- End white_bg -->
+    </main>
+    <!-- End main -->
+
+    <footer class="revealed">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 col-md-4">
+                    <h3 th:text="#{footer.needHelp}">Need help?</h3>
+                    <a href="tel://004542344599" id="phone">+45 423 445 99</a>
+                    <a href="mailto:help@citytours.com" id="email_footer">help@citytours.com</a>
+                    <p><img th:src="@{/static_fr/img/imge/payments.png}" width="231" height="30" alt="Payments" class="img-fluid"></p>
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <h3 th:text="#{footer.about}">About</h3>
+                    <ul>
+                        <li><a href="#" th:text="#{footer.aboutUs}">About us</a></li>
+                        <li><a href="#" th:text="#{footer.faq}">FAQ</a></li>
+                        <li><a href="#" th:text="#{footer.blog}">Blog</a></li>
+                        <li><a href="#" th:text="#{footer.contacts}">Contacts</a></li>
+                        <li><a href="#" th:text="#{footer.login}">Login</a></li>
+                        <li><a href="#" th:text="#{footer.register}">Register</a></li>
+                        <li><a href="#" th:text="#{footer.terms}">Terms and condition</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4" id="newsletter">
+                    <h3 th:text="#{footer.newsletter}">Newsletter</h3>
+                    <p th:text="#{footer.newsletterText}">Join our newsletter to keep be informed about offers and news.</p>
+                    <div id="message-newsletter_2"></div>
+                    <form method="post" action="#" name="newsletter_2" id="newsletter_2">
+                        <div class="form-group">
+                            <input name="email_newsletter_2" id="email_newsletter_2" type="email" value="" placeholder="Your mail" class="form-control">
+                        </div>
+                        <input type="submit" value="Subscribe" class="btn_1" id="submit-newsletter_2" th:value="#{footer.subscribe}">
+                    </form>
+                </div>
+                <div class="col-lg-2 ml-lg-auto">
+                    <h3 th:text="#{footer.settings}">Settings</h3>
+                    <div class="styled-select">
+                        <select name="lang" id="lang">
+                            <option value="English" selected th:text="#{footer.english}">English</option>
+                            <option value="French" th:text="#{footer.french}">French</option>
+                            <option value="Spanish" th:text="#{footer.spanish}">Spanish</option>
+                            <option value="Russian" th:text="#{footer.russian}">Russian</option>
+                        </select>
+                    </div>
+                    <div class="styled-select">
+                        <select name="currency" id="currency">
+                            <option value="USD" selected th:text="#{footer.usd}">USD</option>
+                            <option value="EUR" th:text="#{footer.eur}">EUR</option>
+                            <option value="GBP" th:text="#{footer.gbp}">GBP</option>
+                            <option value="RUB" th:text="#{footer.rub}">RUB</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- End row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="social_footer">
+                        <ul>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-google"></i></a></li>
+                            <li><a href="#"><i class="icon-instagram"></i></a></li>
+                            <li><a href="#"><i class="icon-pinterest"></i></a></li>
+                            <li><a href="#"><i class="icon-vimeo"></i></a></li>
+                            <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+                        </ul>
+                        <p th:text="#{footer.copyright}">© Citytours 2024</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End container -->
+    </footer>
+    <!-- End footer -->
+
+    <div id="toTop"></div><!-- Back to top button -->
+    
+    <!-- Search Menu -->
+    <div class="search-overlay-menu">
+        <span class="search-overlay-close"><i class="icon_set_1_icon-77"></i></span>
+        <form role="search" id="searchform" method="get">
+            <input value="" name="q" type="text" placeholder="Search..." th:placeholder="#{search.placeholder}"/>
+            <button type="submit"><i class="icon_set_1_icon-78"></i></button>
+        </form>
+    </div><!-- End Search Menu -->
+    
+    <!-- Sign In Popup -->
+    <div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
+        <div class="small-dialog-header">
+            <h3 th:text="#{login.title}">Sign In</h3>
+        </div>
+        <form>
+            <div class="sign-in-wrapper">
+                <a href="#0" class="social_bt facebook" th:text="#{login.facebook}">Login with Facebook</a>
+                <a href="#0" class="social_bt google" th:text="#{login.google}">Login with Google</a>
+                <div class="divider"><span th:text="#{login.or}">Or</span></div>
+                <div class="form-group">
+                    <label th:text="#{login.email}">Email</label>
+                    <input type="email" class="form-control" name="email" id="email">
+                    <i class="icon_mail_alt"></i>
+                </div>
+                <div class="form-group">
+                    <label th:text="#{login.password}">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" value="">
+                    <i class="icon_lock_alt"></i>
+                </div>
+                <div class="clearfix add_bottom_15">
+                    <div class="checkboxes float-start">
+                        <label class="container_check" th:text="#{login.remember}">Remember me
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="float-end"><a id="forgot" href="javascript:void(0);" th:text="#{login.forgot}">Forgot Password?</a></div>
+                </div>
+                <div class="text-center"><input type="submit" value="Log In" class="btn_login" th:value="#{login.submit}"></div>
+                <div class="text-center">
+                    <span th:text="#{login.noAccount}">Don't have an account?</span> <a href="javascript:void(0);" th:text="#{login.signup}">Sign up</a>
+                </div>
+                <div id="forgot_pw">
+                    <div class="form-group">
+                        <label th:text="#{login.resetEmail}">Please confirm login email below</label>
+                        <input type="email" class="form-control" name="email_forgot" id="email_forgot">
+                        <i class="icon_mail_alt"></i>
+                    </div>
+                    <p th:text="#{login.resetInstructions}">You will receive an email containing a link allowing you to reset your password to a new preferred one.</p>
+                    <div class="text-center"><input type="submit" value="Reset Password" class="btn_1" th:value="#{login.resetSubmit}"></div>
+                </div>
+            </div>
+        </form>
+        <!--form -->
+    </div>
+    <!-- /Sign In Popup -->
+
+    <!-- Common scripts -->
+    <script th:src="@{/static_fr/JS/js/jquery-3.7.1.min.js}"></script>
+    <script th:src="@{/static_fr/JS/js/common_scripts_min.js}"></script>
+    <script th:src="@{/static_fr/JS/js/functions.js}"></script>
+    <!-- Specific scripts: validation for the footer newsletter -->
+    <script th:src="@{/assets/validate.js}"></script>
+
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script th:src="@{/static_fr/JS/rs-plugin/js/jquery.themepunch.tools.min.js}"></script>
+    <script th:src="@{/static_fr/JS/rs-plugin/js/jquery.themepunch.revolution.min.js}"></script>
+    <script th:src="@{/static_fr/JS/js/revolution_func.js}"></script>
+
+    <!-- SWITCHER  -->
+    <script th:src="@{/static_fr/JS/js/switcher.js}"></script>
+    <div id="style-switcher">
+        <h2 th:text="#{switcher.title}">Color Switcher <a href="#"><i class="icon_set_1_icon-65"></i></a></h2>
+        <div>
+            <ul class="colors" id="color1">
+                <li><a href="#" class="default" title="Default"></a></li>
+                <li><a href="#" class="aqua" title="Aqua"></a></li>
+                <li><a href="#" class="green_switcher" title="Green"></a></li>
+                <li><a href="#" class="orange" title="Orange"></a></li>
+                <li><a href="#" class="blue" title="Blue"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
